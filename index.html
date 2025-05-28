@@ -4,105 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Landing Pages para Psicólogos</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f2f5;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-
-    .container {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .box {
-      background-color: #fff;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      color: #4a90e2;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-
-    .cta-button {
-      display: inline-block;
-      margin: 10px;
-      padding: 14px 28px;
-      background-color: #25D366;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    .cta-button:hover {
-      background-color: #1ebc57;
-    }
-
-    form {
-      text-align: left;
-      margin-top: 30px;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 16px;
-    }
-
-    button {
-      background-color: #4a90e2;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #3a78c2;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="box">
-      <h1>¿Eres psicólogo/a y necesitas una landing page?</h1>
-      <p>Diseño landing pages profesionales y efectivas para ayudarte a atraer más pacientes y fortalecer tu presencia digital.</p>
-      
-      <a class="cta-button" href="https://wa.me/1234567890" target="_blank">Escríbeme por WhatsApp</a>
+  <header>
+    <h1>Landing Pages Profesionales para Psicólogos</h1>
+    <p>Diseñadas para ayudarte a atraer más pacientes y posicionarte en el mundo digital.</p>
+    <a class="cta-button" href="https://wa.me/5491123456789" target="_blank">Contáctame por WhatsApp</a>
+  </header>
 
-      <form action="https://formspree.io/f/tu_codigo_formspree" method="POST">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required>
+  <section class="info">
+    <h2>¿Por qué necesitas una landing page?</h2>
+    <ul>
+      <li>✅ Captura de pacientes potenciales</li>
+      <li>✅ Presencia profesional online</li>
+      <li>✅ Integración con WhatsApp o correo</li>
+    </ul>
+  </section>
 
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="_replyto" required>
+  <section class="formulario">
+    <h2>Solicita tu landing page</h2>
+    <form action="https://formspree.io/f/tu_codigo_formspree" method="POST">
+      <input type="text" name="name" placeholder="Tu nombre" required />
+      <input type="email" name="_replyto" placeholder="Tu correo" required />
+      <textarea name="message" placeholder="¿Qué necesitas?" rows="4" required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </section>
 
-        <label for="message">¿En qué te puedo ayudar?</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <button type="submit">Enviar mensaje</button>
-      </form>
-    </div>
-  </div>
+  <footer>
+    <p>© 2025 Landing Pages para Psicólogos | Desarrollado por Ángela Taverne</p>
+  </footer>
 </body>
 </html>
