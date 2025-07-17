@@ -1,130 +1,143 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f4f6f9;
-  color: #242d38;
+  background: linear-gradient(135deg, #6c38ff, #c162ff);
+  color: #ffffff;
   line-height: 1.6;
-  margin: 0;
+  overflow-x: hidden;
 }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 0 1rem;
-}
-
+/* HERO SECTION */
 .hero {
-  background: linear-gradient(135deg, #6366f1, #a78bfa);
-  color: #fff;
-  padding: 7rem 1rem;
   text-align: center;
+  padding: 6rem 1rem 5rem 1rem;
   position: relative;
+  overflow: hidden;
 }
 
 .hero h1 {
   font-size: 3rem;
   font-weight: 700;
+  text-transform: uppercase;
   margin-bottom: 1rem;
+}
+
+.hero h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #e5e7eb;
+  margin-bottom: 2rem;
 }
 
 .hero p {
   font-size: 1.125rem;
-  margin-bottom: 2rem;
-  color: #e0e7ff;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  color: #f3f4f6;
 }
 
-.hero a {
-  background: #facc15;
-  color: #242d38;
-  padding: 0.85rem 2rem;
-  font-size: 1.125rem;
+.hero .cta {
+  background: #ff3cac;
+  background: linear-gradient(90deg, #ff3cac 0%, #784ba0 100%);
+  padding: 0.75rem 1.75rem;
+  border-radius: 50px;
+  color: #fff;
   font-weight: 600;
-  border-radius: 0.75rem;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-.hero a:hover {
-  background: #eab308;
-  transform: translateY(-3px);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s ease;
 }
 
-/* Section styling */
-section {
-  padding: 4rem 0;
+.hero .cta:hover {
+  background: #d430a2;
+  cursor: pointer;
 }
-.text-center {
+
+/* SECTION CONTAINERS */
+.section {
+  padding: 4rem 1rem;
+  background: #ffffff;
+  color: #1f2937;
   text-align: center;
 }
 
-/* "¿Es para ti?" */
-.bg-gray-100 {
-  background: #eef2f7;
-}
-.list-disc li {
-  margin: 0.75rem 0;
-  font-size: 1.1rem;
+.section h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
 }
 
-/* "¿Qué obtienes?" grid */
-.grid {
-  display: grid;
-  gap: 1.75rem;
+.section ul {
+  list-style: none;
+  padding: 0;
 }
-@media(min-width: 768px) {
-  .grid {
+
+.section ul li {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+/* CARDS */
+.card-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .card-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 .card {
-  background: #fff;
-  padding: 1.75rem;
+  background: #f9fafb;
   border-radius: 1rem;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-5px);
-}
-.card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  color: #6366f1;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  color: #1f2937;
 }
 
-/* CTA section */
-.cta-final {
-  background: #6366f1;
-  color: #fff;
-  padding: 5rem 1rem;
-}
-.cta-final h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-.cta-final a {
-  background: #facc15;
-  color: #242d38;
-  padding: 1rem 2rem;
-  font-size: 1.125rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-}
-.cta-final a:hover {
-  background: #eab308;
-  transform: translateY(-3px);
-}
-
-/* Testimonials */
-.testimonial {
-  max-width: 700px;
-  margin: 2rem auto;
-  font-style: italic;
-  font-size: 1.125rem;
-  color: #374151;
-}
-.testimonial-author {
-  margin-top: 1rem;
+.card h4 {
+  font-size: 1.25rem;
   font-weight: 600;
-  color: #242d38;
+  margin-bottom: 0.5rem;
+}
+
+/* DECORATIVE SHAPES */
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.hero::before {
+  width: 300px;
+  height: 300px;
+  background: #ff3cac;
+  top: -100px;
+  left: -100px;
+}
+
+.hero::after {
+  width: 250px;
+  height: 250px;
+  background: #60a5fa;
+  bottom: -100px;
+  right: -100px;
 }
